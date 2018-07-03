@@ -17,6 +17,7 @@ class NewItem extends Component {
   handleSubmit (e) {
     e.preventDefault()
     // code POST new item to database
+    
   }
 
   render () {

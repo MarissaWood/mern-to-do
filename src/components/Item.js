@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class Item extends Component {
   render () {
     return (
       <div className='item'>
-        <p> this is an item</p>
-        <p>Status: </p>
-        <button onClick={this.deleteItem} >Delete Item </button>
+        <p className='task'> {this.props.task} </p>
+        <p>{this.props.status}</p>
+        <p><Link to='' onClick={this.deleteItem} >Delete Item </Link></p>
       </div>
     )
   }

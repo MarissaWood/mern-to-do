@@ -4,7 +4,16 @@ body {
   font-family: sans-serif;
 }
 
-
 .item {
-  font-family: 'Courier New', Courier, monospace
+  font-family: 'Courier New', Courier, monospace;
+  display: grid;
+  grid-template-columns: 1fr 250px 150px 100px 1fr;
+}
+
+.task {
+  grid-column-start: 2;
+}
+
+li {
+  list-style: none;
 }
