@@ -24,11 +24,14 @@ class NewItem extends Component {
     //   task: this.state.addTask,
     //   status: 'incomplete'
     // })
-    let item = {
-      task: this.state.addTask,
-      status: 'incomplete'
-    }
-    axios.post('https://mern-to-do-api.herokuapp.com/api/items',{item})
+    axios({
+      method: 'post',
+      url: 'https://mern-to-do-api.herokuapp.com/api/items',
+      data: {
+        task: this.state.addTask,
+        status: 'incomplete'
+      }
+    })
       .then((res) => {
         console.log(res)
         this.setState({
