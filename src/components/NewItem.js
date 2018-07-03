@@ -24,7 +24,7 @@ class NewItem extends Component {
       status: 'incomplete'
     }
     // code POST new item to database
-    axios.post('https://mern-to-do-api.herokuapp.com/api/items', {item})
+    axios.post('https://mern-to-do-api.herokuapp.com/api/items', item)
     // axios({
     //   method: 'post',
     //   url: 'https://mern-to-do-api.herokuapp.com/api/items',
