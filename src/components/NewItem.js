@@ -19,21 +19,23 @@ class NewItem extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
+    const item = {
+      task: this.state.addTask,
+      status: 'incomplete'
+    }
     // code POST new item to database
-    // axios.post('https://mern-to-do-api.herokuapp.com/api/items', {
-    //   task: this.state.addTask,
-    //   status: 'incomplete'
+    axios.post('https://mern-to-do-api.herokuapp.com/api/items', {item})
+    // axios({
+    //   method: 'post',
+    //   url: 'https://mern-to-do-api.herokuapp.com/api/items',
+    //   data: {
+    //     task: this.state.addTask,
+    //     status: 'incomplete'
+    //   }
     // })
-    axios({
-      method: 'post',
-      url: 'https://mern-to-do-api.herokuapp.com/api/items',
-      data: {
-        task: this.state.addTask,
-        status: 'incomplete'
-      }
-    })
       .then((res) => {
         console.log(res)
+        console.log(res.data)
         this.setState({
           redirect: true
         })
