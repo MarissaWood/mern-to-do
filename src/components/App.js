@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import './App.css'
-import { Link, Switch, Route } from 'react-router-dom'
+import { Link, Switch, Route, Redirect } from 'react-router-dom'
 import NewItem from './NewItem'
 import List from './List'
+// import ItemUpdate from './ItemUpdate'
 
 class App extends Component {
   render () {
@@ -19,9 +20,17 @@ class App extends Component {
               path='/item/add'
               component={NewItem}
             />
+            {/* <Route
+              path='/item/:id'
+              render={(props) => <ItemUpdate />}
+            /> */}
             <Route
               path='/list'
               component={List}
+            />
+            <Route
+              path='/'
+              render={() => <Redirect to='/list' />}
             />
           </Switch>
         </main>
