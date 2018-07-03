@@ -11,7 +11,7 @@ class List extends Component {
   }
 
   componentDidMount () {
-    axios.get('http://localhost:3001/api/items')
+    axios.get('https://mern-to-do-api.herokuapp.com/api/items')
       .then((res) => {
         console.log(res)
         this.setState({
@@ -21,11 +21,13 @@ class List extends Component {
       .catch((err) => {
         console.log(err)
       })
+
+    console.log('list: compnent did mount')
   }
 
   render () {
     let itemList = this.state.items.map((item) => {
-      return <li><Item task={item.task} status={item.status} /> </li>
+      return <li><Item task={item.task} status={item.status} id={item._id} /> </li>
     })
 
     return (
