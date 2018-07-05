@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import axios from 'axios'
 
 class Item extends Component {
     constructor () {
       super()
       this.state = {
-        itemID: ''
-        // redirect: false
+        itemID: '',
+        redirect: false
       }
     }
   
@@ -26,24 +26,24 @@ class Item extends Component {
         .then((res) => {
           console.log(res)
           this.render()
-          // this.setState({
-          //   redirect: true
-          // })
+          this.setState({
+            redirect: true
+          })
         }).catch((err) => {
           console.log(err)
         })
     }
 
-    // renderRedirect = () => {
-    //   if (this.state.redirect) {
-    //     return <Redirect to='/list' />
-    //   }
-    // }
+    renderRedirect = () => {
+      if (this.state.redirect) {
+        return <Redirect to='/' />
+      }
+    }
 
     render () {
     return (
       <div className='item'>
-      {/* {this.renderRedirect()} */}
+      {this.renderRedirect()}
         <p className='task'> {this.props.task} </p>
         <p>{this.props.status}</p>
         <p><Link to='/' onClick={this.deleteItem} >Delete Item </Link></p>
