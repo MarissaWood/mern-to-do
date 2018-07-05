@@ -11,7 +11,7 @@ class List extends Component {
   }
 
   componentDidMount () {
-    axios.get('https://mern-to-do-api.herokuapp.com/api/items')
+    axios.get('http://localhost:3001/api/items')
       .then((res) => {
         console.log(res)
         this.setState({
