@@ -22,12 +22,12 @@ class List extends Component {
         console.log(err)
       })
 
-    console.log('list: compnent did mount')
+    console.log('list: component did mount')
   }
 
   render () {
-    let itemList = this.state.items.map((item) => {
-      return <li><Item task={item.task} status={item.status} id={item._id} /> </li>
+    let itemList = this.state.items.map((item, idx) => {
+      return <li><Item task={item.task} status={item.status} id={item._id} key={idx} /> </li>
     })
 
     return (
@@ -35,6 +35,9 @@ class List extends Component {
         <h1>To Do List: </h1>
         <ul>
           {itemList}
+          {/* {this.state.items.map((item) => {
+            <li><Item task={item.task} status={item.status} id={item._id} /></li>
+          })} */}
         </ul>
       </div>
     )
