@@ -57,15 +57,20 @@ class Item extends Component {
     }
 
     render () {
-      let update
+      let status
+      let task 
       if (this.props.status === 'incomplete') { 
-        update = <Link to='/' onClick={this.markComplete} >Mark Complete</Link> 
-    }
+        status =    <input type="checkbox" onClick={this.markComplete} /> 
+        task = <p className='task'> {this.props.task} </p>
+      } else {
+        status =   <input type="checkbox" onClick={this.markComplete} checked /> 
+        task = <p className='task-complete'> {this.props.task} </p>
+      }
     return (
       <div className='item'>
       {this.renderRedirect()}
-        <p className='task'> {this.props.task} </p>
-        <p>{this.props.status} <br /> {update} </p>
+        {task}
+        <p>{status}</p>
         <p><Link to='/' onClick={this.deleteItem} >Delete Item </Link></p>
       </div>
     )
