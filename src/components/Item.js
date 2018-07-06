@@ -21,7 +21,7 @@ class Item extends Component {
     deleteItem = (e) => {
       e.preventDefault()
       // let url = 'http://localhost:3001/api/items/' + this.state.itemID
-      let url = 'https://mern-to-do-api.herokuapp.com/api/items' + this.state.itemID
+      let url = 'https://mern-to-do-api.herokuapp.com/api/items/' + this.state.itemID
       // code DELETE ITEM
       axios.delete(url)
         .then((res) => {
