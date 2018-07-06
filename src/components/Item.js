@@ -61,19 +61,26 @@ class Item extends Component {
     render () {
       let status
       let task 
+      let deleteTask
       if (this.props.status === 'incomplete') { 
-        status =    <input type="checkbox" onClick={this.markComplete} /> 
+        status = <input type="checkbox" onClick={this.markComplete} /> 
         task = <p className='task'> {this.props.task} </p>
       } else {
-        status =   <input type="checkbox" onClick={this.markComplete} checked /> 
+        status = <input type="checkbox" onChange={this.markComplete} checked /> 
         task = <p className='task-complete'> {this.props.task} </p>
+      }
+
+      if (this.props.isLoggedIn) {
+        deleteTask = <Link to='/' onClick={this.deleteItem} >Delete Item </Link>
+      } else {
+        deleteTask = ''
       }
     return (
       <div className='item'>
       {this.renderRedirect()}
         {task}
         <p>{status}</p>
-        <p><Link to='/' onClick={this.deleteItem} >Delete Item </Link></p>
+        <p>{deleteTask}</p>
       </div>
     )
   }

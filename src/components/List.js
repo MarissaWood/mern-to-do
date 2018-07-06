@@ -30,7 +30,7 @@ class List extends Component {
 
   render () {
     let itemList = this.state.items.map((item, idx) => {
-      return <li><Item task={item.task} status={item.status} id={item._id} key={idx} /> </li>
+      return <li><Item isLoggedIn={this.props.isLoggedIn} task={item.task} status={item.status} id={item._id} key={idx} /> </li>
     })
 
     return (

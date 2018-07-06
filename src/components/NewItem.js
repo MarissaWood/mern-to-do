@@ -47,20 +47,23 @@ class NewItem extends Component {
   renderRedirect = () => {
     if (this.state.redirect) {
       return <Redirect to='/list' />
-    }
+    } 
   }
 
   render () {
+    let logged
+    if (this.props.isLoggedIn) {
+      logged = <div><p>New Task:</p><textarea name='task' rows="4" cols="50" onChange={(e) => this.handleInput(e)} /><br /><input type='submit' value='Add' /></div>
+    } else {
+      logged = <p>You must be logged in to add a task.</p>
+    }
     return (
       <div>
         {this.renderRedirect()}
         <h1>Add a To-Do Item:</h1>
         <form onSubmit={(e) => this.handleSubmit(e)}>
-          <p>New Task:</p>
           <br />
-          <textarea name='task' rows="4" cols="50" onChange={(e) => this.handleInput(e)} />
-          <br />
-          <input type='submit' value='Add' />
+          {logged}
         </form>
       </div>
     )
