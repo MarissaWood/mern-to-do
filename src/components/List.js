@@ -22,7 +22,10 @@ class List extends Component {
         console.log(err)
       })
 
-    console.log('list: component did mount')
+    // console.log('list: component did mount')
+    // this.setState({
+    //   items: this.props.tasks
+    // })
   }
 
   render () {
