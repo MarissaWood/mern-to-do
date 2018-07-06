@@ -20,7 +20,8 @@ class Item extends Component {
 
     deleteItem = (e) => {
       e.preventDefault()
-      let url = 'http://localhost:3001/api/items/' + this.state.itemID
+      // let url = 'http://localhost:3001/api/items/' + this.state.itemID
+      let url = 'https://mern-to-do-api.herokuapp.com/api/items' + this.state.itemID
       // code DELETE ITEM
       axios.delete(url)
         .then((res) => {
@@ -36,7 +37,8 @@ class Item extends Component {
 
     markComplete = (e) => {
       e.preventDefault()
-      let url = 'http://localhost:3001/api/items/' + this.state.itemID
+      // let url = 'http://localhost:3001/api/items/' + this.state.itemID
+      let url = 'https://mern-to-do-api.herokuapp.com/api/items' + this.state.itemID
       // code UPDATE ITEM
       axios.put(url)
         .then((res) => {
