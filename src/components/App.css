@@ -10,7 +10,6 @@ html, body {
   height: 100vh;
 }
 
-
 nav {
   background:blue;
   color: white;
@@ -34,4 +33,26 @@ nav a {
 
 nav a:hover {
   background: #282C34;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .item {
+    grid-template-columns: 0% 4fr 1fr 1fr 0%
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  nav a {
+    padding: 5px 5px;
+  }
+
+  nav button {
+    margin: 5px 5px;
+  }
 }
