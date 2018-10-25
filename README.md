@@ -12,8 +12,8 @@ CRUD actions can only be performed on the to do list items if a user is logged i
 
 ## Deployed app
 
-The deployed app can be found at [mern-to-do.surge.sh](mern-to-do.surge.sh)
+The deployed app can be found at [mern-to-do.surge.sh](http://mern-to-do.surge.sh/)
 
 ## Back-End Server
 
-The back-end repository can be found at [https://github.com/MarissaWood/mern-to-do-api](https://github.com/MarissaWood/mern-to-do-api) and the deployed back end can be found at [mern-to-do-api.herokuapp.com](mern-to-do-api.herokuapp.com)
+The back-end repository can be found at [https://github.com/MarissaWood/mern-to-do-api](https://github.com/MarissaWood/mern-to-do-api) and the deployed back end can be found at [mern-to-do-api.herokuapp.com](http://mern-to-do-api.herokuapp.com)
