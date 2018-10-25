@@ -4,11 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## About 
 
-This project is the front-end server of an application I build for a Lab during General Assembly's Web Development Immersive Program.  The purpose of this lab was to learn and practice coding in the MERN stack (Mongo, Express, React, Node).
+This project is the front-end server of an application I build for a Lab during General Assembly's Web Development Immersive Program.  The purpose of this lab was to learn and practice coding in the MERN stack (MongoDB, Express, React, Node).
 
 # Authentication
 
-CRUD actions can only be performed on the to do list items if a user is logged in.  
+Full CRUD actions (create, read, update, delete) can only be performed on the to do list items if a user is logged in.  
 
 ## Deployed app
 
